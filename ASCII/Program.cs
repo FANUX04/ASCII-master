@@ -10,12 +10,17 @@ namespace ASCII
             //string unicodestring = Console.ReadLine();
 
 
-            string unicodestring =
+            // string unicodestring =
 
-                "this string has 2 characters outside the" +
-                "ASCII range: \n" +
-                "radiazione (\u2622) , and sigma (\u03A0).";
+            //"this string has 2 characters outside the" +
+            //"ASCII range: \n" +
+            //"radiazione (\u2622) , and sigma (\u03A0).";
+            Console.InputEncoding = System.Text.Encoding.Unicode;
+            string unicodestring = "";
+            Console.WriteLine("inserisci messaggio");
+            unicodestring = Console.ReadLine();
             Console.WriteLine("stringa originale/original string");
+            
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.WriteLine(unicodestring);
             Console.WriteLine();
